@@ -1,0 +1,61 @@
+body{
+    background: none repeat scroll 0 0 #F2EDE0;
+    text-align: center;
+    margin: 0 auto;
+
+}
+.dogeImg{
+    width:300px;
+}
+.wallet{
+    font-size: 20px;
+    height: 30px;
+    text-align: center;
+    width: 430px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.button{
+    height: 34px;
+    width: 436px;
+    font-size: 19px;
+    max-width: 90%;
+    margin: 20px auto;
+}
+.container{
+
+}
+.footer{
+    padding: 40px;
+    text-align:left;
+}
+.select{
+    font-size: 19px;
+    width: 430px;
+    max-width: 90%;
+    height: 34px;
+}
+
+#youraddress{
+    
+}
+#sendto{
+    display: none;
+}
+#address{
+    margin: 20px;
+}
+#claim{
+    display: none;
+}
+#received{
+    margin-top:20px;
+    font-size: 200%;
+}
+#error {
+    margin: 20px;
+}
+.explain{
+    margin: 20px;
+    color: #555;
+}

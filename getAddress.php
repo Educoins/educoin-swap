@@ -11,7 +11,7 @@ if(isset($_GET['address'])){
 //            print_r($wallet->getaddressesbyaccount(""));
 //            6Jpr3q6xzim6HG5GWCYjpMjima9BfBbCVm
             $_SESSION['hisAddress'] = $address;
-            echo $newaddress = $wallet->getnewaddress();
+            echo $newaddress = $wallet->getnewaddress("hisAddress=".$address);
             $_SESSION['ourAddress'] = $newaddress;
             
         } catch (Exception $e) {

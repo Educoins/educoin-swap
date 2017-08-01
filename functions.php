@@ -1,15 +1,11 @@
 <?php
 
-function validate($address){
+function validate($address, $new=true){
     $address = str_replace(' ', '', $address);
-//    if(strlen($address)!=34 || substr($address,0,1)!="6" ){
-//        echo "notValid";die();
-//    }
     require_once 'jsonRPCClient.php';
-    $wallet = new jsonRPCClient('http://educoinrpc:3u7YsB33RqFQwVQoXueHnyUvCnx6SfJjVsKG2qsATRhX@127.0.0.1:33445/');
+    if ($new) $wallet = getNewWallet(); else $wallet = getWallet();
     if ($wallet->validateaddress($address)["isvalid"]==1) return true;
     else return false;
-//    print_r($wallet->validateaddress($address));
 }
 
 function getWallet(){
@@ -19,5 +15,5 @@ function getWallet(){
 
 function getNewWallet(){
     require_once 'jsonRPCClient.php';
-    return new jsonRPCClient('http://educoinrpc:3u7YsB33RqFQwVQoXueHnyUvCnx6SfJjVsKG2qsATRhX@127.0.0.1:34445/');
+    return new jsonRPCClient('http://educoinrpc:3u7YsB33RqFQwVQoXueHnyUvCnx6SfJjVsKG2qsATRhX@127.0.0.1:30445/');//34445
 }

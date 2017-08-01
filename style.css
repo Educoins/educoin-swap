@@ -39,14 +39,11 @@ body{
 #youraddress{
     
 }
-#sendto{
-    display: none;
-}
 #address{
     margin: 20px;
 }
 #claim{
-    display: none;
+    
 }
 #received{
     margin-top:20px;
@@ -58,4 +55,10 @@ body{
 .explain{
     margin: 20px;
     color: #555;
+}
+#hisAddress{
+    display: none;
+}
+#result{
+    margin-top: 15px;
 }

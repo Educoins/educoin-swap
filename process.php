@@ -21,7 +21,7 @@ if (validate($hisAddress) && validate($ourAddress, false)){
         $oldWallet->setaccount($ourAddress, "used");
 //        echo $newAddress, $amount, "New coins corresponding to address $oldAddress", "New coins corresponding to address $oldAddress"; //<educoinaddress> <amount> [comment] [comment-to]
 //        $newWallet->sendtoaddress($newAddress, $amount, "New coins corresponding to address $oldAddress", "New coins corresponding to address $oldAddress"); //<educoinaddress> <amount> [comment] [comment-to]
-        echo "You should receive your coins at $hisAddress soon";
+        echo "You should receive $newAmount coins at $hisAddress soon";
     } catch (Exception $e) {
         echo "Sorry, couldn't process your claim.";
     }

@@ -76,5 +76,3 @@ include './getAddress.php';
         <?php } ?>
     </body>
 </html>
-
-<!--<div id=error> Connection to blockchain failed. We've been notified and we will look into it. </div>-->

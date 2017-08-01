@@ -2,12 +2,14 @@
 require_once './functions.php';
 $oldWallet = getWallet();
 
+
 if(isset($_GET['hisAddress'])){
     $hisAddress=$_GET['hisAddress'];
     if (validate($hisAddress)){
         $ourAddress = $oldWallet->getaddressesbyaccount("hisAddress=".$hisAddress)[0];
         if (trim($ourAddress)=="" || !validate($ourAddress)){
             try{
+                if ($walletpassphrase_old!="") $oldWallet->walletpassphrase($walletpassphrase_old,30);
     //            echo $newaddress = $wallet->getaccountaddress("");
     //            print_r($wallet->getaddressesbyaccount(""));
     //            6Jpr3q6xzim6HG5GWCYjpMjima9BfBbCVm

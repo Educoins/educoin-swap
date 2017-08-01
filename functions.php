@@ -9,11 +9,13 @@ function validate($address, $new=true){
 }
 
 function getWallet(){
+    include 'secret.php';
     require_once 'jsonRPCClient.php';
-    return new jsonRPCClient('http://educoinrpc:3u7YsB33RqFQwVQoXueHnyUvCnx6SfJjVsKG2qsATRhX@127.0.0.1:33445/');
+    return new jsonRPCClient("http://$rpcuser_old:$rpcpassword_old@127.0.0.1:33445/");
 }
 
 function getNewWallet(){
+    include 'secret.php';
     require_once 'jsonRPCClient.php';
-    return new jsonRPCClient('http://educoinrpc:3u7YsB33RqFQwVQoXueHnyUvCnx6SfJjVsKG2qsATRhX@127.0.0.1:30445/');//34445
+    return new jsonRPCClient("http://$rpcuser_new:$rpcpassword_new@127.0.0.1:30445/");//34445
 }

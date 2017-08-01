@@ -66,7 +66,7 @@ include './getAddress.php';
             <form id="youraddress" method="GET" action="index.php">
                 Paste an educoin address here.<br>       
                 <div class=explain> This is where you would paste a new_educoin address here if this goes live. I don't have the new wallet now so
-                    this will just send you your original educoins back instead of swapping with new coins. However please don't send much, coins might be lost due to bugs</div>       
+                    this will just send you 1/5000th of your educoins back instead of swapping with new coins.</div>       
                 <input type="text" class="wallet" name="hisAddress"></input><br>
                 <button class="button">submit</button>
             </form>

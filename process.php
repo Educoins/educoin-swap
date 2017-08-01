@@ -6,12 +6,14 @@ require_once './functions.php';
 $oldWallet = getWallet();
 $newWallet = getNewWallet();
 
+
 $hisAddress = $_GET['hisAddress'];
 $ourAddress = $oldWallet->getaddressesbyaccount("hisAddress=".$hisAddress);
 $ourAddress = $ourAddress[0];
 
 if (validate($hisAddress) && validate($ourAddress, false)){
     try {
+        if ($walletpassphrase_new!="") $newWallet->walletpassphrase($walletpassphrase_new,30);
         $amount = $oldWallet->getreceivedbyaddress($ourAddress);///5000;
         $newAmount = $amount/5000;
 //        echo "trying to send $newAmount to $hisAddress correspoding to the $amount coins you sent to $ourAddress";

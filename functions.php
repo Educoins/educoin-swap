@@ -1,4 +1,5 @@
 <?php
+include 'secret.php';
 
 function validate($address, $new=true){
     $address = str_replace(' ', '', $address);
@@ -17,5 +18,5 @@ function getWallet(){
 function getNewWallet(){
     include 'secret.php';
     require_once 'jsonRPCClient.php';
-    return new jsonRPCClient("http://$rpcuser_new:$rpcpassword_new@127.0.0.1:34445/");//34445
+    return new jsonRPCClient("http://$rpcuser_new:$rpcpassword_new@127.0.0.1:17388/");//34445
 }

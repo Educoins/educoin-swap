@@ -1,8 +1,12 @@
 body{
-    background: none repeat scroll 0 0 #F2EDE0;
+    background: none repeat scroll 0 0 #88b04b;
     text-align: center;
     margin: 0 auto;
+    font-family: Lato, "Helvetica", Arial, sans-serif;
 
+}
+h1{
+    color: white;
 }
 .dogeImg{
     width:300px;
@@ -48,17 +52,33 @@ body{
 #received{
     margin-top:20px;
     font-size: 200%;
+    color: white;
 }
 #error {
     margin: 20px;
 }
 .explain{
-    margin: 20px;
-    color: #555;
+    margin: 20px auto;
+    color: #222;
+    max-width: 600px;
 }
 #hisAddress{
     display: none;
 }
 #result{
     margin-top: 15px;
+}
+button{
+    border: 2px solid white;
+    border-radius: 2px;
+    color: white;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    background: transparent;
+}
+
+input[type=text]{
+    border:0 none;
+    background: white;
+    color: #3b3a3b;
+    font-family: Lato, Helvetica, Arial, sans-serif;
 }

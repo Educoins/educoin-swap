@@ -12,6 +12,7 @@ include './getAddress.php';
         <meta name="description" content="Στειλτε sms για να αποκτησετε dogecoins." />        
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
         <script
             src="https://code.jquery.com/jquery-3.2.1.js"
             integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
@@ -37,12 +38,13 @@ include './getAddress.php';
                 <div id="error">Sorry invalid address. Check your spelling</div>
             <?php } else if ($result=="ok") { ?>
             <div id="sendto">
-                Send your old educoins to this address
+                <h1>Send your old educoins to this address</h1>
                 <div id="address">
                     <?=$ourAddress?>
                 </div>
-                The 0 below will change to the amount you send to this address. When the transaction is confirmed you will be able to claim your new educoins.
+                <div class=explain>The 0 below will change to the amount you send to this address. When the transaction is confirmed you will be able to claim your new educoins.
                 If you don't want to wait, either bookmark this page or just come back later and give the same address.
+                </div>
             </div>
             
             <div id="received">  
@@ -64,9 +66,8 @@ include './getAddress.php';
             <?php } else if ($result == 'firstTime') {?>
 
             <form id="youraddress" method="GET" action="index.php">
-                Paste an educoin address here.<br>       
-                <div class=explain> This is where you would paste a new_educoin address here if this goes live. I don't have the new wallet now so
-                    this will just send you 1/5000th of your educoins back instead of swapping with new coins.</div>       
+                <h1>Paste an educoin address here.</h1>       
+                <div class=explain> Here goes the educoin address from the 2017 wallet. We will send your new educoins to this address.</div>       
                 <input type="text" class="wallet" name="hisAddress"></input><br>
                 <button class="button">submit</button>
             </form>

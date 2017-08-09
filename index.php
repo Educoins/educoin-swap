@@ -8,8 +8,8 @@ include './getAddress.php';
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Educoin Swap</title>
-        <meta name="keywords" content="dogecoin,αγορα dogecoin,mining,bitcoin" />
-        <meta name="description" content="Στειλτε sms για να αποκτησετε dogecoins." />        
+        <meta name="keywords" content="educoin, swap" />
+        <meta name="description" content="Educoin swap system" />        
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 

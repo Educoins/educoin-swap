@@ -21,7 +21,7 @@ if (validate($hisAddress) && validate($ourAddress, false)){
         $newWallet->sendtoaddress($hisAddress, $newAmount, "New coins corresponding to address $ourAddress", "New coins corresponding to address $ourAddress"); //<educoinaddress> <amount> [comment] [comment-to]
         //invalidate ouraddress
         if ($walletpassphrase_new!="") $newWallet->walletlock();
-        $oldWallet->setaccount($ourAddress, "used");
+        $oldWallet->setaccount($ourAddress, "used_".$hisAddress);
 //        echo $newAddress, $amount, "New coins corresponding to address $oldAddress", "New coins corresponding to address $oldAddress"; //<educoinaddress> <amount> [comment] [comment-to]
 //        $newWallet->sendtoaddress($newAddress, $amount, "New coins corresponding to address $oldAddress", "New coins corresponding to address $oldAddress"); //<educoinaddress> <amount> [comment] [comment-to]
         echo "You should receive <strong>$newAmount</strong> coins at <pre>$hisAddress</pre> soon";

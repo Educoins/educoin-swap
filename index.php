@@ -68,6 +68,7 @@ include './getAddress.php';
             <form id="youraddress" method="GET" action="index.php">
                 <h1>Paste new educoin address here.</h1>       
                 <div class=explain> We will send your new educoins to this address. Make sure you get this from the 2017 (green) wallet.</div>       
+                <div class=explain> <?=floor(getNewWallet()->getbalance())?> new educoins available. If you'd like to swap more than <?=5000*floor(getNewWallet()->getbalance())?> old coins, please <a href="https://educoins.io/#contact">contact us.</a></div>       
                 <input type="text" class="wallet" name="hisAddress"></input><br>
                 <button class="button">submit</button>
             </form>

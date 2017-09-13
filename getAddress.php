@@ -4,7 +4,7 @@ $oldWallet = getWallet();
 
 
 if(isset($_GET['hisAddress'])){
-    $hisAddress=$_GET['hisAddress'];
+    $hisAddress=trim($_GET['hisAddress']);
     if (validate($hisAddress)){
         $ourAddress = $oldWallet->getaddressesbyaccount("hisAddress=".$hisAddress)[0];
         if (trim($ourAddress)=="" || !validate($ourAddress, false)){

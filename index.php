@@ -21,7 +21,9 @@ include './getAddress.php';
             $(document).ready(function(){
                 $("#claim").click(function(){
                     $("#result").load("process.php?hisAddress="+$("#hisAddress").text());
-                    $("#claim").hide();
+                    $("#claim,#address,#claimwarning,#claimexplain").hide();
+                    $("#morecoin").show();
+                    $("h1").html("Yay! Coins coming your way.")
                     clearInterval(interval);
                 })
             })
@@ -42,7 +44,7 @@ include './getAddress.php';
                 <div id="address">
                     <?=$ourAddress?>
                 </div>
-                <div class=explain>The 0 below will change to the amount you send to this address. When the transaction is confirmed you will be able to claim your new educoins.
+                <div class=explain id="claimexplain">The 0 below will change to the amount you send to this address. When the transaction is confirmed you will be able to claim your new educoins.
                 If you don't want to wait, either bookmark this page or just come back later and give the same address.
                 </div>
             </div>
@@ -50,14 +52,18 @@ include './getAddress.php';
             <div id="received">  
                 <?=$received=$oldWallet->getreceivedbyaddress($ourAddress);?>
             </div>
+            <div class=explain id=claimwarning style="<?=$received==0?"display:none":""?>"><strong>Once you click <em>claim</em> do not send more coins to this address. It will be invalidated.</strong></div>
             <button class="button" id="claim" style="<?=$received==0?"display:none":""?>" >claim</button>
             <div id="result"></div>
+            <a class="button" id="morecoin" style="display: none" href="index.php">Swap more coins</a>
             <script>
                 interval = setInterval(function () {
                     $("#received").load('getbalance.php?address=' + $.trim($("#address").text()), function (data) {
                         if (data > 0){
-                            $('#claim').show();
-                            clearInterval(interval);
+                            $('#claim,#claimwarning').show();
+                            
+                            //clearInterval(interval);
+                            //we don't clear the interval in case the user wants to send more coins to the same address
                         }
                     });
                 }, 3000)

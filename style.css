@@ -68,12 +68,20 @@ h1{
 #result{
     margin-top: 15px;
 }
-button{
+button, a.button{
     border: 2px solid white;
     border-radius: 2px;
     color: white;
     font-family: Lato, Helvetica, Arial, sans-serif;
     background: transparent;
+}
+
+a.button{
+    padding: 4px 10px 0 10px;
+    line-height: 141%;
+    text-decoration: none;
+    display: block;
+    vertical-align: middle;
 }
 
 input[type=text]{
